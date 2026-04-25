@@ -35,7 +35,13 @@ export default function Review() {
           ol: ({node, ...props}) => <ol {...props} />,
           blockquote: ({node, ...props}) => <blockquote {...props} />,
           code: ({node, ...props}) => <code {...props} />,
-          pre: ({node, ...props}) => <pre {...props} />
+          pre: ({node, ...props}) => <pre {...props} />,
+          img: ({node, ...props}) => {
+            const src = typeof props.src === 'string' && !props.src.startsWith('/')
+              ? `/review-assets/${slug}/${props.src}`
+              : props.src;
+            return <img {...props} src={src} className="article__image" />;
+          }
         }}
       >
         {content}
