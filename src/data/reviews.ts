@@ -1,9 +1,17 @@
-export const reviews = [
+export const reviewMetadata = [
   {
     slug: "movie-1",
     title: "Movie One",
-    excerpt: "A quiet reflection on time and memory...",
-    content: "# Movie One\n\nFull markdown content here."
+    excerpt: "A quiet meditation on memory...",
   },
-  // add more
+  {
+    slug: "movie-2",
+    title: "Movie Two",
+    excerpt: "A louder, messier experience...",
+  },
+  {
+    slug: "movie-3",
+    title: "Movie Three",
+    excerpt: "A restrained, elegant story...",
+  }
 ];
