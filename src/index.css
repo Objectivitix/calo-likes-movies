@@ -235,6 +235,28 @@ article pre code {
   letter-spacing: 0.05em;
 }
 
+/* Rating Component */
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 1rem 0 1.5rem 0;
+}
+
+.rating__star {
+  font-size: 1.3rem;
+  line-height: 1;
+  display: inline-block;
+}
+
+.rating__star--full {
+  color: var(--link-color);
+}
+
+.rating__star--half {
+  color: var(--link-color);
+}
+
 code {
   font-size: 15px;
   line-height: 135%;

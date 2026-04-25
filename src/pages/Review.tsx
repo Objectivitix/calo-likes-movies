@@ -1,6 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
+import Rating from "../components/Rating";
 import { reviewMetadata } from "../data/reviews";
 
 export default function Review() {
@@ -22,6 +23,7 @@ export default function Review() {
       <Link to="/" className="article__back-link">← Back to reviews</Link>
 
       <h1>{reviewMeta.title}</h1>
+      <Rating rating={reviewMeta.rating} />
 
       <ReactMarkdown
         components={{
