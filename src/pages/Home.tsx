@@ -10,15 +10,20 @@ export default function Home() {
     <>
       <Hero />
 
-      <section>
-        <h2>Reviews</h2>
+      <section className="reviews-section">
+        <h2 className="reviews-section__title">Reviews</h2>
 
-        {reviewMetadata.slice(0, visible).map(r => (
-          <ReviewCard key={r.slug} review={r} />
-        ))}
+        <div className="reviews-section__grid">
+          {reviewMetadata.slice(0, visible).map(r => (
+            <ReviewCard key={r.slug} review={r} />
+          ))}
+        </div>
 
         {visible < reviewMetadata.length && (
-          <button onClick={() => setVisible(v => v + 4)}>
+          <button
+            className="show-more-button"
+            onClick={() => setVisible(v => v + 4)}
+          >
             Show more
           </button>
         )}
