@@ -19,12 +19,33 @@ export default function Review() {
 
   if (!reviewMeta) return <p>Not found</p>;
 
+  const publishDate = new Date(reviewMeta.publishDate).toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  });
+
   return (
     <article>
       <Link to="/" className="article__back-link">← Back to reviews</Link>
 
       <h1>{reviewMeta.title}</h1>
       <Rating rating={reviewMeta.rating} />
+      
+      <div className="article__metadata">
+        <div className="article__metadata-item">
+          <span className="article__metadata-label">Released</span>
+          <span className="article__metadata-value">{reviewMeta.year}</span>
+        </div>
+        <div className="article__metadata-item">
+          <span className="article__metadata-label">Runtime</span>
+          <span className="article__metadata-value">{reviewMeta.runtime} min</span>
+        </div>
+        <div className="article__metadata-item">
+          <span className="article__metadata-label">Reviewed</span>
+          <span className="article__metadata-value">{publishDate}</span>
+        </div>
+      </div>
 
       <ReactMarkdown
         components={{
@@ -50,3 +71,4 @@ export default function Review() {
     </article>
   );
 }
+

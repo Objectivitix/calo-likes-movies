@@ -61,3 +61,34 @@ article pre code {
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
+
+/* Article Metadata */
+.article__metadata {
+  display: flex;
+  gap: 2rem;
+  margin: 1.5rem 0 2.5rem 0;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  font-size: 0.95rem;
+}
+
+.article__metadata-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.article__metadata-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.article__metadata-value {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  color: var(--text-heading);
+}

@@ -13,6 +13,27 @@
   font-size: 1.5rem;
 }
 
+.review-card__metadata {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin: 0.5rem 0 1rem 0;
+}
+
+.review-card__year {
+  font-weight: 500;
+}
+
+.review-card__separator {
+  opacity: 0.5;
+}
+
+.review-card__date {
+  font-style: italic;
+}
+
 .review-card__excerpt {
   color: var(--text-muted);
   margin: 0 0 1rem 0;
