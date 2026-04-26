@@ -3,7 +3,8 @@ import './FilmCarousel.css';
 export default function FilmCarousel() {
   const imageModules = import.meta.glob('/public/carousel/**/*.{jpg,jpeg,png,webp}', { 
     eager: true,
-    as: 'url'
+    query: '?url', 
+    import: 'default' 
   });
   
   const images = Object.values(imageModules) as string[];
