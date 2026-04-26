@@ -1,5 +1,6 @@
+import './ReviewCard.css';
 import { Link } from "react-router-dom";
-import Rating from "./Rating";
+import Rating from "../Rating/Rating";
 
 export default function ReviewCard({ review }) {
   return (

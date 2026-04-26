@@ -1,3 +1,5 @@
+import './FilmCarousel.css';
+
 export default function FilmCarousel() {
   const imageModules = import.meta.glob('/public/carousel/**/*.{jpg,jpeg,png,webp}', { 
     eager: true,

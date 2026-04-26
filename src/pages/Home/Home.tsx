@@ -1,7 +1,8 @@
+import './Home.css';
 import { useState } from "react";
-import Hero from "../components/Hero";
-import ReviewCard from "../components/ReviewCard";
-import { reviewMetadata } from "../data/reviews";
+import Hero from "../../components/Hero/Hero";
+import ReviewCard from "../../components/ReviewCard/ReviewCard";
+import { reviewMetadata } from "../../data/reviews";
 
 export default function Home() {
   const [visible, setVisible] = useState(4);

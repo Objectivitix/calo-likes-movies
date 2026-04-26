@@ -1,8 +1,9 @@
+import './Review.css';
 import { useParams, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
-import Rating from "../components/Rating";
-import { reviewMetadata } from "../data/reviews";
+import Rating from "../../components/Rating/Rating";
+import { reviewMetadata } from "../../data/reviews";
 
 export default function Review() {
   const { slug } = useParams();
@@ -11,7 +12,7 @@ export default function Review() {
   const [content, setContent] = useState("");
 
   useEffect(() => {
-    import(`../data/content/${slug}.md?raw`)
+    import(`../../data/content/${slug}.md?raw`)
       .then(mod => setContent(mod.default))
       .catch(() => setContent("# Not found"));
   }, [slug]);

@@ -1,3 +1,5 @@
+import './Rating.css';
+
 interface RatingProps {
   rating: number;
 }

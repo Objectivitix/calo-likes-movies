@@ -1,4 +1,5 @@
-import FilmCarousel from "./FilmCarousel";
+import './Hero.css';
+import FilmCarousel from "../FilmCarousel/FilmCarousel";
 
 export default function Hero() {
   return (

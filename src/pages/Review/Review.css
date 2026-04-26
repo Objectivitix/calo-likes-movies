@@ -1,0 +1,63 @@
+/* Article Content */
+article h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+article ul,
+article ol {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+article li {
+  margin-bottom: 0.5rem;
+  line-height: 1.7;
+}
+
+article blockquote {
+  border-left: 3px solid var(--border-color);
+  margin: 2rem 0;
+  padding-left: 1.5rem;
+  font-style: italic;
+  color: var(--text-muted);
+}
+
+article code {
+  font-family: var(--font-mono);
+  background: var(--bg-accent);
+  padding: 0.15em 0.4em;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+article pre {
+  background: var(--bg-accent);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 1.5rem;
+  overflow-x: auto;
+  line-height: 1.5;
+}
+
+article pre code {
+  background: none;
+  padding: 0;
+}
+
+/* Article Images */
+.article__image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 2rem 0;
+}
+
+/* Back Link for Review Pages */
+.article__back-link {
+  display: inline-block;
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
