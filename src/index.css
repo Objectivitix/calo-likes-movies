@@ -221,6 +221,60 @@ article {
   }
 }
 
+@media screen and (max-aspect-ratio: 4 / 5) {
+  .film-carousel {
+    align-items: flex-start;
+    position: relative;
+  }
+
+  .film-carousel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 10vh;
+    background: linear-gradient(to bottom, #fefdfbff 0%, #fefdfbaa 20%, #fefdfb50 50%, transparent 100%);
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .film-carousel__container {
+    justify-content: center;
+  }
+
+  .film-carousel__track {
+    flex-direction: column;
+    align-items: center;
+    animation: film-slide-vertical 60s linear infinite;
+  }
+
+  @keyframes film-slide-vertical {
+    0% {
+      transform: translateY(-33.333%);
+    }
+    100% {
+      transform: translateY(-66.666%);
+    }
+  }
+
+  .film-carousel__frame {
+    flex-direction: row;
+    width: 77vw;
+    justify-content: center;
+  }
+
+  .film-carousel__perforations {
+    flex-direction: column;
+    gap: 3.5vw;
+  }
+
+  .film-carousel__perforation {
+    width: 4vw;
+    height: 3vw;
+  }
+}
+
 /* Reviews Section */
 .reviews-section {
   padding: 3rem 2rem;
