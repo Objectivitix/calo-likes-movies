@@ -4,7 +4,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  gap: clamp(1rem, 7vh, 5rem);
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -29,4 +30,11 @@
   color: var(--text-muted);
   margin: 0;
   font-style: italic;
+}
+
+@media screen and (max-aspect-ratio: 4 / 5) {
+  .hero {
+    gap: 2rem;
+    padding-top: 1rem;
+  }
 }
