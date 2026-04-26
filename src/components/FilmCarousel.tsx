@@ -23,11 +23,11 @@ export default function FilmCarousel() {
         <div className="film-carousel__track">
           {extendedImages.map((image, index) => (
             <div key={index} className="film-carousel__frame">
-              <div className="film-carousel__frame-top">
+              <div className="film-carousel__perforations">
                 <Perforations />
               </div>
               <img src={image} alt="Movie poster" className="film-carousel__image" />
-              <div className="film-carousel__frame-bottom">
+              <div className="film-carousel__perforations">
                 <Perforations />
               </div>
             </div>

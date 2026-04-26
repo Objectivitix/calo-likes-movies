@@ -132,7 +132,7 @@ article {
   display: flex;
   align-items: center;
   background-color: var(--text-heading);
-  padding: 1rem;
+  padding: 1%;
 }
 
 .film-carousel__track {
@@ -159,13 +159,12 @@ article {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  gap: 4%;
 }
 
-.film-carousel__frame-top,
-.film-carousel__frame-bottom {
+.film-carousel__perforations {
   display: flex;
-  gap: 2.37rem;
+  gap: 7%;
   justify-content: center;
   width: 100%;
 }
@@ -188,6 +187,38 @@ article {
 
 .film-carousel__frame:hover .film-carousel__image {
   opacity: 1;
+}
+
+@media screen and (max-height: 700px) {
+  .film-carousel__container {
+    padding: 2.5vh;
+  }
+
+  .film-carousel__frame {
+    width: 60vh;
+    gap: 6%;
+  }
+
+  .film-carousel__perforations {
+    gap: 6.5%;
+  }
+
+  .film-carousel__perforation {
+    width: 4vh;
+    height: 4.5vh;
+  }
+}
+
+@media screen and (max-height: 450px) {
+  .film-carousel__frame {
+    width: 50vh;
+    gap: 7%;
+  }
+
+  .film-carousel__perforation {
+    width: 3vh;
+    height: 3.3vh;
+  }
 }
 
 /* Reviews Section */
