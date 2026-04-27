@@ -1,8 +1,13 @@
 import './ReviewCard.css';
 import { Link } from "react-router-dom";
 import Rating from "../Rating/Rating";
+import type { ReviewMeta } from '../../data/reviews';
 
-export default function ReviewCard({ review }) {
+interface ReviewCardProps {
+  review: ReviewMeta;
+}
+
+export default function ReviewCard({ review }: ReviewCardProps) {
   const publishDate = new Date(review.publishDate).toLocaleDateString('en-US', {
     year: 'numeric',
     month: 'short',

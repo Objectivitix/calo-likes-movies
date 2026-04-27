@@ -27,3 +27,13 @@ export const reviewMetadata = [
     publishDate: "2024-04-10",
   }
 ];
+
+export interface ReviewMeta {
+  slug: string;
+  title: string;
+  excerpt: string;
+  rating: number;
+  year: number;
+  runtime: number;
+  publishDate: string; // or Date if you normalize earlier
+}
